@@ -1,0 +1,21 @@
+CREATE TABLE `delivery_boy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `address` longtext,
+  `age` varchar(2000) DEFAULT NULL,
+  `phone_no` varchar(255) DEFAULT NULL,
+  `email_id` varchar(255) DEFAULT NULL,
+  `lanaguage_know` varchar(255) DEFAULT NULL,
+  `education_qualification` mediumtext,
+  `gender` varchar(255) DEFAULT NULL,
+  `created_on` datetime NOT NULL,
+  `married_status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=83113984 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `uploader` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uploader_link` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=83113984 DEFAULT CHARSET=utf8;

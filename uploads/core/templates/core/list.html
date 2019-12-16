@@ -1,0 +1,98 @@
+
+<style type="text/css">
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: green;
+  color: blue;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: red;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+<div class="topnav">
+  <a href="http://127.0.0.1:8000/uploads/simple/">Upload</a>
+  <a href="http://127.0.0.1:8000/list/delivery/boy/">Delivert Boy Listing</a>
+  <a href="http://127.0.0.1:8000/add/delivery/boy/">Add Delivery Boy</a>
+</div>
+<br>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Email Id</th>
+      <th scope="col">Language Know</th>
+      <th scope="col">Qualification</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Married</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for delivery in data %}
+    <tr>
+      <td>{{delivery.name}}</td>
+      <td>{{delivery.age}}</td>
+      <td>{{delivery.address}}</td>
+      <td>{{delivery.phone_no}}</td>
+      <td>{{delivery.email_id}}</td>
+      <td>{{delivery.lanaguage_know}}</td>
+      <td>{{delivery.education_qualification}}</td>
+      <td>{{delivery.gender}}</td>
+      <td>{{delivery.married_status}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
